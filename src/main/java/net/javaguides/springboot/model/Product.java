@@ -36,4 +36,6 @@ public class Product implements Serializable {
 
     private Double cGst;
 
+    private String hsnCode;
+
 }

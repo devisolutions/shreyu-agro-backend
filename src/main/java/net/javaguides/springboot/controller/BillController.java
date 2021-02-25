@@ -50,6 +50,7 @@ public class BillController {
                             .price(eachBillItem.getProduct().getPrice())
                             .cGst(eachBillItem.getProduct().getCGst())
                             .sGst(eachBillItem.getProduct().getSGst())
+                            .hsnCode(eachBillItem.getProduct().getHsnCode())
                             .build())
                     .collect(Collectors.toList());
             return BillDto.builder()
