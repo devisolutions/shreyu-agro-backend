@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 @Getter
@@ -21,7 +21,7 @@ public class BillDto implements Serializable {
 
     private Long billId;
 
-    private LocalDateTime dateOfBill;
+    private LocalDate dateOfBill;
 
     private String buyerName;
 

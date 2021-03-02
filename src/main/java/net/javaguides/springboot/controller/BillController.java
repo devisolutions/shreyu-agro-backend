@@ -51,6 +51,7 @@ public class BillController {
                             .cGst(eachBillItem.getProduct().getCGst())
                             .sGst(eachBillItem.getProduct().getSGst())
                             .hsnCode(eachBillItem.getProduct().getHsnCode())
+                            .name(eachBillItem.getProduct().getName())
                             .build())
                     .collect(Collectors.toList());
             return BillDto.builder()

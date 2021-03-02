@@ -30,4 +30,6 @@ public class BillItemsDto implements Serializable {
     private Double cGst;
 
     private String hsnCode;
+
+    private String name;
 }
