@@ -38,4 +38,6 @@ public class Product implements Serializable {
 
     private String hsnCode;
 
+    private Long itemsPerBox;
+
 }

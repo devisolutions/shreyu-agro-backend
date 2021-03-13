@@ -52,6 +52,8 @@ public class BillController {
                             .sGst(eachBillItem.getProduct().getSGst())
                             .hsnCode(eachBillItem.getProduct().getHsnCode())
                             .name(eachBillItem.getProduct().getName())
+                            .productOrder(eachBillItem.getProductOrder())
+                            .itemsPerBox(eachBillItem.getProduct().getItemsPerBox())
                             .build())
                     .collect(Collectors.toList());
             return BillDto.builder()
@@ -104,6 +106,7 @@ public class BillController {
                     .map(billItemsDto -> BillItems.builder()
                             .product(Product.builder().code(billItemsDto.getProductCode()).build())
                             .qty(billItemsDto.getProductQuantity())
+                            .productOrder(billItemsDto.getProductOrder())
                             .build())
                     .collect(Collectors.toSet());
         } else {

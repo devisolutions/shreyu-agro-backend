@@ -36,4 +36,6 @@ public class BillItems implements Serializable {
     private Bill bill;
 
     private Long qty;
+
+    private Long productOrder;
 }

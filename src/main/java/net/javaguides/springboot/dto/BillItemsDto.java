@@ -32,4 +32,8 @@ public class BillItemsDto implements Serializable {
     private String hsnCode;
 
     private String name;
+
+    private Long productOrder;
+
+    private Long itemsPerBox;
 }
