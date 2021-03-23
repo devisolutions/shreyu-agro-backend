@@ -43,8 +43,13 @@ public class ProductController {
     }
 
     @DeleteMapping("/{code}")
-    public void deleteProductByCode(@PathVariable Long code) {
-        productRepository.deleteById(code);
+    public boolean deleteProductByCode(@PathVariable Long code) {
+        try {
+            productRepository.deleteById(code);
+            return Boolean.TRUE;
+        } catch (Exception e) {
+            return Boolean.FALSE;
+        }
     }
 
     @PostMapping("/{code}")
